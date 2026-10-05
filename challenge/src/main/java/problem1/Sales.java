@@ -8,10 +8,10 @@ public class Sales
         int[] sales = new int[SALESPEOPLE];
         int sum;
         Scanner scan = new Scanner(System.in);
-        for (int i=0; i<sales.length; i++)
+        for (int i=0; i<sales.length -1; i++)
         {
             System.out.print("Enter sales for salesperson " + i + ": ");
-            sales[i] = scan.nextInt();
+            sales[i+1] = scan.nextInt();
         }
         System.out.println("\nSalesperson Sales");
         System.out.println("--------------------");
@@ -44,6 +44,22 @@ public class Sales
 
         System.out.println("the maximum sale is  : "+ max + " and the id of the saleperson is  : " + max_id) ;
         System.out.println("the minimum sale is  : "+ min + " and the id of the saleperson is  : " + min_id) ;
+
+        Scanner sc = new Scanner(System.in) ;
+        System.out.println("Eenter a value : ") ;
+
+        int i_val  =  sc.nextInt() ;
+
+        System.out.println("the sales values that are surpassing the enterd value with the ids are  : ");
+        int count =  0 ;
+        for ( int i = 0 ; i < sales.length ; i++) {
+            if (sales[i] > i_val) {
+                System.out.println(i + "  : " + sales[i]) ;
+                count ++ ;
+            }
+        }
+
+        System.out.println("the number of salesmen who surpassed the entered vale is : " + count );
 
 
     }
