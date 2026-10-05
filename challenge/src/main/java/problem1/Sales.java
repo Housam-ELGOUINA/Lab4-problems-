@@ -4,14 +4,18 @@ public class Sales
 {
     public static void main(String[] args)
     {
-        final int SALESPEOPLE = 5;
+        final int SALESPEOPLE  ;
+        Scanner sc  =  new Scanner(System.in) ;
+        System.out.println("enter the number of salespeople  : ") ;
+        SALESPEOPLE = sc.nextInt() ;
         int[] sales = new int[SALESPEOPLE];
         int sum;
         Scanner scan = new Scanner(System.in);
-        for (int i=0; i<sales.length -1; i++)
+        for (int i=0; i<sales.length; i++)
         {
-            System.out.print("Enter sales for salesperson " + i + ": ");
-            sales[i+1] = scan.nextInt();
+            int idx  =  i+1 ;
+            System.out.print("Enter sales for salesperson " + idx + ": ");
+            sales[i] = scan.nextInt();
         }
         System.out.println("\nSalesperson Sales");
         System.out.println("--------------------");
@@ -22,7 +26,7 @@ public class Sales
 
         int min  = sales[0] ;
         int min_id  =  1 ;
-        for (int i=0; i<sales.length -1; i++)
+        for (int i=0; i<sales.length; i++)
         {
             System.out.println(" " + i + " " + sales[i]);
             sum += sales[i];
@@ -45,8 +49,7 @@ public class Sales
         System.out.println("the maximum sale is  : "+ max + " and the id of the saleperson is  : " + max_id) ;
         System.out.println("the minimum sale is  : "+ min + " and the id of the saleperson is  : " + min_id) ;
 
-        Scanner sc = new Scanner(System.in) ;
-        System.out.println("Eenter a value : ") ;
+        System.out.println("Enter a value : ") ;
 
         int i_val  =  sc.nextInt() ;
 

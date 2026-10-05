@@ -3,6 +3,7 @@ package problem2;
 public class IntegerList
 {
     int[] list; //values in the list
+    private int size  ;
     //-------------------------------------------------------
 //create a list of the given size
 //-------------------------------------------------------
@@ -25,5 +26,23 @@ public class IntegerList
     {
         for (int i=0; i<list.length; i++)
             System.out.println(i + ":\t" + list[i]);
+    }
+
+    public void increaseSize() {
+        this.size ++  ;
+        int[] newList =  new int[this.size] ;
+        for ( int i =0 ; i < this.list.length ; i++) {
+            newList[i]  = this.list[i];
+        }
+
+        this.list  =  newList ;
+    }
+
+
+    public void addElement(int newVal) {
+        if ( this.list.length == this.size) {
+            increaseSize();
+        }
+        this.list[this.size] = newVal ;
     }
 }

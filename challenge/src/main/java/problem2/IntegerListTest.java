@@ -40,6 +40,11 @@ public class IntegerListTest
             case 2:
                 list.print();
                 break;
+            case 3 :
+                Scanner sc  =  new Scanner(System.in) ;
+                System.out.println("Enter the value to add to the list : ");
+                int addVal  =  sc.nextInt() ;
+                list.addElement(addVal);
             default:
                 System.out.println("Sorry, invalid choice");
         }
@@ -54,6 +59,7 @@ public class IntegerListTest
         System.out.println("0: Quit");
         System.out.println("1: Create a new list (** do this first!! **)");
         System.out.println("2: Print the list");
+        System.out.println("3 : Add a value to the list");
         System.out.print("\nEnter your choice: ");
     }
 }
