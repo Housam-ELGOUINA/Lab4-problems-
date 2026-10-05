@@ -4,6 +4,7 @@ public class IntegerList
 {
     int[] list; //values in the list
     private int size  ;
+    private int numberOfElemnts  ;
     //-------------------------------------------------------
 //create a list of the given size
 //-------------------------------------------------------
@@ -43,6 +44,65 @@ public class IntegerList
         if ( this.list.length == this.size) {
             increaseSize();
         }
-        this.list[this.size] = newVal ;
+
+        int[]  newList  =  new int[this.list.length +1 ] ;
+        for ( int i =0 ; i < newList.length -1 ; i++) {
+            newList[i] = this.list[i] ;
+        }
+        newList[this.list.length] = newVal ;
+
+        this.list =  newList ;
+
+        this.numberOfElemnts  ++   ;
     }
+
+    public void removeFirst(int newVal) {
+        for ( int i =0 ; i < this.list.length  ; i++) {
+            if ( this.list[i] == newVal) {
+                int remove_idx =  i ;
+                int[] newList  = new int[this.list.length] ;
+
+                for ( int j =0 ; j < this.list.length ; j++) {
+                    if (j != remove_idx) {
+                        newList[j] = this.list[j] ;
+                    }
+                    else {
+                        continue;
+                    }
+
+
+                }
+
+                this.list = newList ;
+                this.numberOfElemnts -- ;
+
+                break;
+            }
+
+
+
+        }
+
+
+    }
+
+    public void removeAll(int newVal) {
+
+        int[] newList  =  new int[this.list.length] ;
+        int count_removed  = 0 ;
+        for ( int i =0 ; i < this.list.length  ; i++) {
+            if (this.list[i] == newVal ) {
+                count_removed ++;
+                continue ;
+            } else {
+                newList[i] =  this.list[i] ;
+            }
+        }
+        this.numberOfElemnts = this.numberOfElemnts - count_removed ;
+
+        this.list  = newList ;
+
+
+    }
+
 }
