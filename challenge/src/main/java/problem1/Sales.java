@@ -16,11 +16,35 @@ public class Sales
         System.out.println("\nSalesperson Sales");
         System.out.println("--------------------");
         sum = 0;
+
+        int max = sales[0] ;
+        int max_id  = 0 ;
+
+        int min  = sales[0] ;
+        int min_id  =  0 ;
         for (int i=0; i<sales.length; i++)
         {
             System.out.println(" " + i + " " + sales[i]);
             sum += sales[i];
+
+            if (sales[i] > max) {
+                max  =  sales[i] ;
+                max_id  =  i ;
+            }
+
+            if ( sales[i]  < min) {
+                min  = sales[i] ;
+                min_id  =  i ;
+            }
         }
         System.out.println("\nTotal sales: " + sum);
+
+        System.out.println("the average is  : "+ sum/5) ;
+
+
+        System.out.println("the maximum sale is  : "+ max + " and the id of the saleperson is  : " + max_id) ;
+        System.out.println("the minimum sale is  : "+ min + " and the id of the saleperson is  : " + min_id) ;
+
+
     }
 }
