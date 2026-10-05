@@ -18,23 +18,23 @@ public class Sales
         sum = 0;
 
         int max = sales[0] ;
-        int max_id  = 0 ;
+        int max_id  = 1 ;
 
         int min  = sales[0] ;
-        int min_id  =  0 ;
-        for (int i=0; i<sales.length; i++)
+        int min_id  =  1 ;
+        for (int i=0; i<sales.length -1; i++)
         {
             System.out.println(" " + i + " " + sales[i]);
             sum += sales[i];
 
             if (sales[i] > max) {
                 max  =  sales[i] ;
-                max_id  =  i ;
+                max_id  =  i+1 ;
             }
 
             if ( sales[i]  < min) {
                 min  = sales[i] ;
-                min_id  =  i ;
+                min_id  =  i+1 ;
             }
         }
         System.out.println("\nTotal sales: " + sum);
