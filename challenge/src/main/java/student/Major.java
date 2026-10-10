@@ -17,6 +17,11 @@ public class Major {
 
     // Method to add a student
     public void addStudent(Student s) {
+
+        if (this.students.length == 50) {
+            System.out.println("Too many students already exist in this major !") ;
+            return;
+        }
         Student[] updatedStudents  =  new Student[this.students.length +1] ;
         for ( int i = 0 ; i < updatedStudents.length  ; i++) {
             updatedStudents[i] =  this.students[i] ;
@@ -27,10 +32,39 @@ public class Major {
     }
 
     // Getters
+    public  int getId() { return this.id; }
+
+    public String getCode() { return this.code; }
+
+    public String getName() { return this.name; }
+
+    public int getStudentCount() { return this.studentCount; }
+
+
+    // Setters :
+
+    public void setId(int id ) {this.id  = id ; }
+    public void setCode(String code) {this.code  =  code ;}
+    public void setName(String name ) {this.name  = name  ; }
+
 
 
     // Display all students in the major
     public void displayStudents() {
+        for (int i = 0; i < this.studentCount; i++) {
+            System.out.println(this.students[i]); // uses Student.toString()
+        }
+
+
+    }
+
+    @Override
+    public String toString() {
+        return "Major{id : " + this.id + '\'' +
+                 "  , " + this.name + '\'' +
+                "  , " + this.code + '\'' +
+                "  , " + this.studentCount +  " }" ;
+
 
     }
 

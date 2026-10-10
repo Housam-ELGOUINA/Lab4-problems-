@@ -16,5 +16,16 @@ public class Person {
         this.email =  email ;
         // add others
     }
+
+    public int getId() {return this.id ; }
+    public String getFirstName() { return this.firstName; }
+
+    public String getSecondName() { return this.secondName; }
+
+    public String getPhone() { return this.phone; }
+
+    public String getEmail() { return this.email; }
+
+    // Setters  :
 }
 
