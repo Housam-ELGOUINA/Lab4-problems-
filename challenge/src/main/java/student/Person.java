@@ -11,6 +11,9 @@ public class Person {
     public Person(String firstName, String secondName, String telephone, String email) {
         this.id = nextId++;
         this.firstName = firstName;
+        this.secondName =  secondName ;
+        this.phone =  telephone ;
+        this.email =  email ;
         // add others
     }
 }
