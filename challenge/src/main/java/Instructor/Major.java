@@ -21,7 +21,6 @@ public class Major {
         this.students = new Student[0];
     }
 
-    // Method to add a student
     public void addStudent(Student s) {
         if (this.studentCount == MAX_STUDENTS) {
             System.out.println("Too many students already exist in this major !");
@@ -42,7 +41,6 @@ public class Major {
         s.setMajor(this);
     }
 
-    // Getters
     public int getId() { return this.id; }
 
     public String getCode() { return this.code; }
@@ -126,7 +124,7 @@ public class Major {
 
                     sb.append(". ");
             sb.append(s.getCne()).append(" ") ;
-            
+
                     sb.append(s.getFullNameFormatted());
             if (i < this.studentCount - 1) {
                 sb.append("\n");
