@@ -26,6 +26,15 @@ public class Student extends Person {
     public void setMajor(Major m) {this.major =  m ; }
 
 
+    public String getFullNameFormatted() {
+          StringBuilder sb  =  new StringBuilder() ;
+          sb.append(this.firstName.toUpperCase()) ;
+          sb.append(", ") ;
+          sb.append(this.secondName.substring(0 ,1).toUpperCase()) ;
+          sb.append(this.secondName.substring(1).toLowerCase()) ;
+          return sb.toString() ;
+    }
+
     @Override
     public String toString() {
 

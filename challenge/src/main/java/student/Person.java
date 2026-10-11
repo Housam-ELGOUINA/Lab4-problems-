@@ -27,5 +27,21 @@ public class Person {
     public String getEmail() { return this.email; }
 
     // Setters  :
+    public void setFirstName(String f) { this.firstName = f; }
+
+    public void setSecondName(String s) { this.secondName = s; }
+
+    public void setPhone(String ph) { this.phone = ph; }
+
+    public void setEmail(String email) { this.email = email; }
+
+    @Override
+    public String toString() {
+        return "Person{id=" + id
+                + "  , firstName : " + firstName + '\''
+                + " , SecondName  : " + secondName + '\''
+                + "  , phone  : " + phone + '\''
+                + " , email : " + email + '\'' + "}";
+    }
 }
 
