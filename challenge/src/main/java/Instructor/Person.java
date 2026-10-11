@@ -29,13 +29,11 @@ public class Person {
     public String getPhone() { return this.phone; }
     public String getEmail() { return this.email; }
 
-    // Setters (no setId: the id is auto-incremented)
     public void setLastName(String lastName) { this.lastName = lastName; }
     public void setFirstName(String firstName) { this.firstName = firstName; }
     public void setPhone(String phone) { this.phone = phone; }
     public void setEmail(String email) { this.email = email; }
 
-    // From the class diagram: +display() : void
     public void display() {
         System.out.println(this);
     }

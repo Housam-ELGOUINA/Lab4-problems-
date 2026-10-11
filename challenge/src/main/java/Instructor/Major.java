@@ -44,6 +44,7 @@ public class Major {
 
     // Getters
     public int getId() { return this.id; }
+
     public String getCode() { return this.code; }
     public String getName() { return this.name; }
     public int getStudentCount() { return this.studentCount; }
@@ -63,7 +64,6 @@ public class Major {
     public void setCode(String code) { this.code = code;  }
     public void setName(String name) { this.name = name; }
 
-    // Display all students in the major
     public void displayStudents() {
 
 
@@ -123,8 +123,10 @@ public class Major {
         for (int i = 0; i < this.studentCount; i++) {
             Student s = this.students[i];
             sb.append(i + 1)  ;
+
                     sb.append(". ");
             sb.append(s.getCne()).append(" ") ;
+            
                     sb.append(s.getFullNameFormatted());
             if (i < this.studentCount - 1) {
                 sb.append("\n");
